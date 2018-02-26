@@ -1,0 +1,314 @@
+#inline-block-code {
+  display: inline-block;
+  vertical-align: top;
+  /* http://designshack.net/articles/css/whats-the-deal-with-display-inline-block */
+  /* Dirty IE Hack */
+  zoom: 1;
+  *display: inline;
+}
+
+$total-height: 700px;
+.home-services {
+  position: relative;
+  height: $total-height;
+  white-space: nowrap; /* so uber important to prevent blocks from wrapping */
+  overflow: hidden;
+  // @media(max-width: $screen-sm-min){
+  //   min-height: $total-height;
+  //   height: inherit;
+  // }
+
+  &__inline-block {
+    @extend #inline-block-code;
+    margin-right: -4px;
+  }
+
+  &-offcanvas {
+    // position: relative;
+    height: $total-height;
+    width: 70px;
+    margin: 0;
+    padding: 0;
+
+    /* check -slider-nav-bullets for contents */
+    // @media(max-width: $screen-sm-min){
+    //   min-height: $total-height;
+    //   height: inherit;
+    // }
+
+    &--inline-block {
+      @extend #inline-block-code;
+      margin-right: -4px;
+    }
+
+    &.active {
+      width: 335px;
+    }
+
+    &__inline-block {
+      @extend #inline-block-code;
+      margin-right: -4px;
+    }
+
+    &-toggle {
+      $toggle-color: rgba(255, 255, 255, 0.2);
+      $toggle-active-color: #333333;
+      height: 100%;
+      width: 70px;
+      margin: 0;
+      padding: 0;
+      background-color: $toggle-color;
+      &:hover {
+        background-color: $toggle-active-color;
+      }
+      box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+
+      &.active {
+        background-color: $toggle-active-color;
+        &:hover {
+          background-color: $toggle-color;
+        }
+      }
+
+      &__btn {
+        margin: 25px;
+        font-size: 1.5em;
+        color: #FFFFFF;
+      }
+    }
+
+    &.inactive {
+      left: -265px;
+    }
+  }
+  &-slider {
+    height: 100%;
+    max-width: 850px;
+    @media(min-width: 1400px){
+      max-width: 900px;
+    }
+    @media(min-width: 1450px){
+      max-width: 950px;
+    }
+    @media(min-width: 1550px){
+      // max-width: 1050px;
+      max-width: initial;
+    }
+    overflow: hidden;
+    .slide-group {
+      height: 100%;
+    }
+    &-slide {
+      height: 100%;
+      // width: 830px;
+      width: 100%;
+      // border-right: 80px #F4F5F6 solid;
+      border-right: 8rem #F4F5F6 solid;
+      @media(min-width: 1550px){
+        width: 95%;
+      }
+      &.darker-border {
+        border-color: #333333;
+      }
+      white-space: initial; /* basically like clear float */
+      display: none;
+      &.active {
+        display: inline-block;
+      }
+      &.last {
+        background-color: #333333;
+      }
+
+      /* just apply inline-block without "__inline_block" addition */
+      @extend #inline-block-code;
+      // margin-right: -84px;
+      margin-right: -8.4rem;
+
+      &__bottom-section {
+        @media(max-width: $screen-xs-min){
+          height: 500px;
+          overflow: scroll;
+        }
+      }
+      &__section {
+        &--top {
+          position: relative;
+        }
+        &--middle {
+          height: 320px;
+          padding: 50px 50px 0;
+          @media(max-width: $screen-sm-min){
+            min-height: 320px;
+            height: inherit;
+          }
+          @media(max-width: $screen-xs-min){
+            width: 110%;
+            padding-left: 20px;
+          }
+        }
+        &--bottom {
+          // width: 100%;
+          padding-bottom: 50px;
+          padding-left: 50px;
+          position: relative;
+          bottom: 0;
+        }
+      }
+      &__graphic {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width: 100%;
+      }
+      &__title {
+        &--main {
+          height: 75px;
+          margin: auto;
+          position: absolute;
+          top: 50px;
+          right: 30px;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          font-size: 36pt;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          @media(max-width: $screen-xs-min){
+            width: 60%;
+            margin: auto 0;
+            top: 0;
+            right: initial;
+            left: 25px;
+            font-size: 2.0em;
+            text-align: left;
+          }
+        }
+        &--sub {
+          // font-size: 1.3em;
+          font-size: 12pt;
+          font-weight: bold;
+          color: #808080;
+        }
+      }
+      &__text {
+        font-size: 12pt;
+        color: #808080;
+        white-space: pre-line; /* ie fix */
+        @media(max-width: $screen-xs-min){
+          width: 80%;
+          font-size: .9em;
+        }
+      }
+      &__more {} /* need to grab this via below */
+      a.read-more-btn {
+        background-color: transparent;
+        max-width: 680px;
+        text-decoration: none;
+        color: #f26c23;
+        padding: 9px 20px 7px 20px;
+        border: 4px solid #f26c23;
+        border-radius: 0px;
+        // font-size: 1.5em;
+        font-size: 16pt;
+        // font-weight: bold;
+        @media(max-width: $screen-xs-min){
+          height: 50px;
+          width: 60%;
+          display: block;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #f26c23;
+        }
+      }
+    }
+    &-nav {
+      background-color: #333333;
+      &--offcanvas {
+        height: $total-height;
+        min-width: 335px;
+        margin: 0;
+        padding: 0;
+        border-right: 1px solid #000000;
+        overflow: hidden;
+        float: right;
+        // @media(max-width: $screen-sm-min){
+        //   min-height: $total-height;
+        //   height: inherit;
+        // }
+      }
+      &--arrows {
+        background-color: transparent;
+      }
+      &__bullet-list {
+        margin: 0 20px;
+        width: 220px;
+        // float: left;
+      }
+      &-bullets {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        &__title, &__link {
+          padding: 5px 0 5px;
+          text-align: center;
+          font-size: 1.10em;
+        }
+        &__title {
+          padding: 10px 0 10px;
+          font-weight: bold;
+          color: #ffffff;
+        }
+        &__link {
+          color: lightgrey;
+          cursor: pointer;
+
+          /* double click won't highlight text */
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+      }
+      &__arrow {
+        &--prev, &--next {
+          height: 100px;
+          width: 20px;
+          padding: 20px;
+          border: none;
+          outline: none;
+          background: transparent;
+          background-image: url(HSM-web-articles-handoff_mediumarrow.png);
+          background-repeat: no-repeat;
+          background-position: left;
+          background-size: 20px;
+          position: absolute;
+          top: 300px;
+          z-index: 9;
+          cursor: pointer;
+          color: transparent;
+
+          /* double click won't highlight text */
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+        &--prev {
+          left: 90px;
+        }
+        &--next {
+          right: 100px;
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          @media(max-width: $screen-lg-min){
+            right: 40px;
+          }
+        }
+      }
+    }
+  }
+}

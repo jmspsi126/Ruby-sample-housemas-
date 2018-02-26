@@ -1,0 +1,21 @@
+.modal-override {
+  &__document {
+    position: relative;
+  }
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 50;
+    span {
+      font-size: 1.5em;
+    }
+    &--light {
+      span {
+        color: #FFF;
+        text-shadow: none;
+      }
+    }
+  }
+  &__content {}
+}

@@ -1,0 +1,30 @@
+<% # if user selected a zee, preload that selection %>
+<% selected = @geo_zees['selected'] %>
+<div id="zee-profiles" class="<%= (!selected.nil?) ? 'hidden' : '' %>">
+  <div class="owner-widget__header">HOUSEMASTERS NEAR YOU:</div>
+  <div id="zee-list">
+    <% @geo_zees['zees'].each do |z| %>
+      <div class="owner-profile-info owner-profile-info--multiple" data-zee-info="<%= z.to_json %>">
+        <div class="owner-profile-info__name"><%= z["display_name"].gsub(' ', '<br />').html_safe %></div>
+        <% zee_image = find_zee_image(@geo_zees['zees'][0]['franchisee_number']) %>
+        <% if !zee_image.blank? %>
+          <img class="owner-profile-info__img" src="<%= zee_image %>"/>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div id="chosen-zee-profile" class="<%= (!selected.nil?) ? '' : 'hidden' %>">
+  <div class="owner-widget__header">LOCALLY OWNED & OPERATED BY</div>
+  <div class="owner-profile-info">
+    <div class="owner-profile-info__name">
+      <%= (!selected.nil?) ? @geo_zees['zees'][selected]['display_name'] : '' %>
+    </div>
+    <% zee_image = (!selected.nil?) ? find_zee_image(@geo_zees['zees'][selected]['franchisee_number']) : '' %>
+    <% if !zee_image.blank? %>
+      <img class="owner-profile-info__img" src="<%= zee_image %>"/>
+    <% end %>
+  </div>
+  <a id="show-multi-zees" class="owner-profile-info__back-button" href="#" >back to local owners</a>
+  <div class="clearfix"></div>
+</div>

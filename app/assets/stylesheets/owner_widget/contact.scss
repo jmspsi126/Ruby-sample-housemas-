@@ -1,0 +1,141 @@
+.owner-contact {
+  padding-right: 30px;
+  &__header {
+    margin-bottom: 10px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #808080;
+  }
+  &__indent {
+    @media(max-width: $screen-xs-min){
+      padding: 0;
+    }
+  }
+  &__location {
+    font-size: 16pt;
+    font-weight: bold;
+    color: #404040;
+  }
+  &__change-location {
+    padding: 0 0 10px;
+    display: block;
+    color: inherit;
+    font-size: 8pt;
+    &:hover, &:focus {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    &--btn {
+      width: 100%;
+      margin: 0 0 5px;
+      padding: 1rem 2rem 1.0625rem 2rem;
+      border: #009578 4px solid;
+      border-radius: 0px;
+      display: inline-block;
+      background-color: transparent;
+      font-size: 12pt;
+      color: #009578;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: initial;
+      cursor: pointer;
+      transition: background-color 300ms ease-out;
+
+      &:hover {
+        background-color: #009578;
+        color: #fff;
+      }
+    }
+  }
+  &__breaker {
+    margin: 10px 0 20px;
+    border-top: 1px solid #666;
+    &--last {
+      margin: 20px 0 20px;
+      border-bottom: 1px solid #666;
+    }
+  }
+  &__icon {
+    margin-left: -20px;
+    color: lightgray;
+  }
+  &__phone {
+    padding: 3px 0;
+    border-top: 1px solid #666;
+  }
+  &__email {
+    padding: 3px 0;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+  }
+  &__phone--link, &__email--link {
+    text-decoration: none;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #009578;
+    @media(max-width: $screen-xs-min){
+      font-size: 11pt;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #009578;
+    }
+  }
+  &__address1, &__address2 {
+    padding: 3px 0;
+    border-bottom: 1px solid #666;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #009578;
+  }
+  &__schedule {
+    &--btn{
+      margin: 2rem 0;
+      padding: 1rem 2rem 1.0625rem 2rem;
+      border: #009578 4px solid;
+      border-radius: 0px;
+      display: inline-block;
+      background-color: transparent;
+      font-size: 12pt;
+      color: #009578;
+      text-align: center;
+      text-decoration: none;
+      line-height: initial;
+      cursor: pointer;
+      transition: background-color 300ms ease-out;
+      @media(max-width: $screen-xs-min){
+        font-size: 11pt;
+      }
+
+      &:hover {
+        background-color: #009578;
+        color: #fff;
+      }
+    }
+  }
+  &__franchise {
+    &--btn{
+      width: 100%;
+      margin: 0;
+      padding: 1rem 2rem 1.0625rem 2rem;
+      border: #009578 4px solid;
+      border-radius: 0px;
+      display: inline-block;
+      background-color: transparent;
+      font-size: 12pt;
+      color: #009578;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: initial;
+      cursor: pointer;
+      transition: background-color 300ms ease-out;
+
+      &:hover {
+        background-color: #009578;
+        color: #fff;
+      }
+    }
+  }
+}

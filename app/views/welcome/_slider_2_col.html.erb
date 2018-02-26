@@ -1,0 +1,36 @@
+<section class="homeintro">
+  <div class="hidden-xs col-sm-6 no-gutters homeintro-slider">
+    <div class="slide-group">
+      <% i = 0 %>
+      <% @image_slider_articles.each do |slide| %>
+        <div class="homeintro-slider-slide homeintro-slider-slide--img <%= (i == 0) ? 'active' : '' %>">
+          <div class="homeintro-slider-slide__graphic" style="background-image: url(<%= slide['article_image'] %>);"></div>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-6 no-gutters homeintro-slider">
+    <div class="slide-group">
+      <% i = 0 %>
+      <% @image_slider_articles.each do |slide| %>
+        <div class="homeintro-slider-slide <%= (i == 0) ? 'active' : '' %>">
+          <h2 class="homeintro-slider-slide__title"><%= link_to slide['title'], "#{root_url}#{slide['slug']}" %></h2>
+          <p class="homeintro-slider-slide__desc"><%= slide['seo_description'] %></p>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+    <div class="homeintro-slider-nav im-a-slider-nav" data-target="homeintro-slider">
+      <ul class="bullets homeintro-slider-nav-bullets">
+        <% for ii in 1..i %>
+          <li class="bullet <%= (ii == 1) ? 'active' : '' %>">
+            <%= ii %>
+          </li>
+        <% end %>
+      </ul>
+      <span class="arrows homeintro-slider-nav__arrow--next" data-direction="next">&gt;</span>
+      <span class="arrows homeintro-slider-nav__arrow--prev" data-direction="prev">&lt;</span>
+    </div>
+  </div>
+</section>

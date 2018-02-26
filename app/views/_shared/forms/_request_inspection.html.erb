@@ -1,0 +1,61 @@
+<section class="col-md-12 request-inspection">
+  <div class="col-sm-11 center-block">
+    <h2 class="text-center request-inspection__title">REQUEST AN INSPECTION</h2>
+
+    <div class="sections request-inspection-form">
+      <div class="thanks hidden">
+        <p class="request-inspection-form__thanks">
+          Thanks! Your request has been sent. We look forward to serving you real soon.
+        </p>
+      </div>
+      <form id="ajax-request-inspection" action="/request_inspection">
+        <div class="col-xs-12 col-sm-8 center-block no-gutters">
+          <div class="request-inspection-form__label-container col-xs-3">
+            <label for="name" class="request-inspection-form__label">NAME</label>
+          </div>
+          <div class="col-xs-9">
+            <input id="name" name="name" type="text" class="request-inspection-form__input" placeholder="FIRST AND LAST NAME" />
+          </div>
+
+          <div class="request-inspection-form__label-container col-xs-3">
+            <label for="phone" class="request-inspection-form__label">PHONE</label>
+          </div>
+          <div class="col-xs-9">
+            <input id="phone" name="phone" type="text" class="request-inspection-form__input" placeholder="(###) ###-####" />
+          </div>
+
+          <div class="request-inspection-form__label-container col-xs-3">
+            <label for="email" class="request-inspection-form__label">EMAIL</label>
+          </div>
+          <div class="col-xs-9">
+            <input id="email" name="email" type="text" class="request-inspection-form__input" placeholder="EMAIL ADDRESS" />
+          </div>
+
+          <div class="request-inspection-form__label-container col-xs-3">
+            <label for="location" class="request-inspection-form__label">LOCATION</label>
+          </div>
+          <div class="col-xs-9">
+            <input id="location" name="zip_code" type="text" class="request-inspection-form__input" placeholder="ZIP/POSTAL CODE" />
+          </div>
+
+          <%# To get this form working the way requesting an inspection currently works, we need
+          <%# to adjust the form (remove this section) to be like the current solution
+          <%# <div class="text-right col-xs-3">
+          <%#   <label for="date" class="request-inspection-form__label">DATE</label>
+          <%# </div>
+          <%# <div class="col-xs-9">
+          <%#   <input id="date" type="text" class="request-inspection-form__input request-inspection-form__input--date" placeholder="MM/DD/YYYY" />
+          <%#   <button class="request-inspection-form__calendar-button"><i class="glyphicon glyphicon-calendar"></i></button>
+          <%# </div> %>
+
+          <div class="col-xs-offset-3 col-xs-9">
+            <button type="submit" class="request-inspection-form__submit">SUBMIT</button>
+            <span class="request-inspection-form__error error-message">&nbsp;</span>
+          </div>
+          <div class="col-xs-12 newsletter-subscribe-form__loader loading hidden"></div>
+          <div class="clearfix"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

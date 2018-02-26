@@ -1,0 +1,30 @@
+.franchise-we-are {
+  padding-top: 90px;
+  padding-bottom: 110px;
+  background-color: rgba(0,0,0,.1);
+  @media(max-width: $screen-sm-min){
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+  &__title {
+    font-size: 26pt;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.5);
+  }
+  &__breaker {
+    width: 40%;
+    border-width: 2px;
+    text-align: center;
+    border-color: lightgray;
+  }
+  &-description {
+    &__title {
+      font-size: 12pt;
+      text-transform: uppercase;
+    }
+    &__text {
+      font-size: 12pt;
+      color: gray;
+    }
+  }
+}

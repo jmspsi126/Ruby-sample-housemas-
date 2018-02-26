@@ -1,0 +1,14 @@
+<!-- GeoLocated Franchisee -->
+<% if @geo_zees.empty? %>
+  <% # nothing returned, show blank %>
+  <%= render :partial => "_shared/widget/owner_blank" %>
+<% elsif @geo_zees['zees'].count == 1 %>
+  <% # if 1 zee returned %>
+  <%= render :partial => "_shared/widget/owner_single" %>
+<% elsif @geo_zees['zees'].count > 1 %>
+  <% # if 1+ zees returned %>
+  <%= render :partial => "_shared/widget/owner_multiple" %>
+<% else %>
+  <% # no zees returned, but zees key is set %>
+  <%= render :partial => "_shared/widget/owner_none" %>
+<% end %>

@@ -1,0 +1,18 @@
+/*
+ * An article consist of the following pages:
+ * 
+ * /buyers/article-name
+ * /sellers/article-name
+ * /agents/article-name
+ * 
+ */
+
+ //for media queries
+ @import "_media_breakpoints";
+
+
+ //buyers, sellers, agents
+ @import "articles/article_header";
+ @import "articles/article_author";
+ @import "articles/article_body";
+ @import "shared/sliders/featured";

@@ -1,0 +1,49 @@
+<section class="franchise-contact">
+  <div class="franchise-contact__background" style="background-image: url(https://s3-us-west-2.amazonaws.com/hm-com/static/EbWbBxpuc30KuCRgGVlLCg/franchiseop-boat.png);">
+    <div class="col-xs-12 col-sm-9 center-block">
+      <h2 class="text-center franchise-contact__title">LEARN MORE ABOUT OWNING YOUR OWN BUSINESS</h2>
+      <hr class="franchise-contact__breaker">
+      <div class="col-xs-12 no-gutters">
+
+        <div class="col-sm-12 col-md-4 franchise-contact-info">
+          <div class="col-xs-12 col-sm-6 col-md-12">
+            <h3 class="franchise-contact-info__title">Contact Info</h3>
+            <p class="franchise-contact-info__street">422 N 300 W</p>
+            <p class="franchise-contact-info__city-state-zip">Salt Lake City, UT 84103</p>
+            <p class="franchise-contact-info__phone"><a href="tel:801-503-9230">801.503.9230</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-12">
+            <p class="franchise-contact-info__email"><a href="mailto:franchise@housemaster.com">franchise@housemaster.com</a></p>
+            <p class="franchise-contact-info__url"><%= link_to "housemaster.com", root_url %></p>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-8 sections franchise-contact-form">
+          <div class="thanks hidden">
+            <p class="franchise-contact-form__thanks">
+              Thank you for contacting us. One of our representatives will be contacting you shortly.
+            </p>
+          </div>
+          <%= form_for @franchise_contact, :url => franchise_contact_path, :html => {:id => 'ajax-franchise-opportunity'} do |f| %>
+            <div class="col-xs-12 col-sm-6">
+              <%= f.text_field :name, :placeholder => "NAME", :class => 'franchise-contact-form__name' %>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <%= f.text_field :email, :placeholder => "EMAIL", :class => 'franchise-contact-form__email' %>
+            </div>
+            <div class="col-xs-12">
+              <%= f.text_area :message, :placeholder => "MESSAGE", :class => 'franchise-contact-form__message' %>
+            </div>
+            <div class="col-xs-12">
+              <%= f.submit "SEND", :class => 'franchise-contact-form__submit' %>
+              <span class="franchise-contact-form__error error-message">&nbsp;</span>
+            </div>
+            <div class="col-xs-12 franchise-contact-form__loader loading hidden"></div>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>

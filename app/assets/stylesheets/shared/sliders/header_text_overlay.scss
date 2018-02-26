@@ -1,0 +1,24 @@
+.article-header {
+  &-slides {
+  }
+  &-slide {
+    &--text {
+      &__graphic {
+      }
+      &__title {
+      }
+      &__text {
+      }
+      &__author {
+      }
+    }
+  }
+  &-nav {
+    .nav-list {
+      &__slide-bullet {
+        &--active {
+        }
+      }
+    }
+  }
+}

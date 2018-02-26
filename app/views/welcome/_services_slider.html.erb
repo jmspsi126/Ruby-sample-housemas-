@@ -1,0 +1,58 @@
+<section class="col-md-12 home-services">
+  <aside class="home-services-offcanvas home-services-offcanvas--inline-block <%#= 'active' # for slide out %>">
+    <div class="home-services-slider-nav home-services-slider-nav--offcanvas im-a-slider-nav" data-target="home-services-slider">
+      <div class="home-services-slider-nav__bullet-list home-services-offcanvas__inline-block">
+        <ul class="bullets home-services-slider-nav-bullets">
+          <li class="home-services-slider-nav-bullets__title">INSPECTION SERVICES</li>
+
+          <li class="bullet home-services-slider-nav-bullets__link active">ROOFING</li>
+          <li class="bullet home-services-slider-nav-bullets__link">HEATING & COOLING</li>
+          <li class="bullet home-services-slider-nav-bullets__link">PLUMBING</li>
+          <li class="bullet home-services-slider-nav-bullets__link">SIDING</li>
+          <li class="bullet home-services-slider-nav-bullets__link">STRUCTURE</li>
+          <li class="bullet home-services-slider-nav-bullets__link">FOUNDATION</li>
+          <li class="bullet home-services-slider-nav-bullets__link">ELECTRICAL</li>
+          <li class="bullet home-services-slider-nav-bullets__link">KITCHEN</li>
+
+          <li class="home-services-slider-nav-bullets__title">ADDITIONAL SERVICES</li>
+
+          <li class="bullet home-services-slider-nav-bullets__link">RADON SCREENING</li>
+          <li class="bullet home-services-slider-nav-bullets__link">WOOD DESTROYING INSECTS</li>
+          <li class="bullet home-services-slider-nav-bullets__link">LEAD PAINT SCREENING</li>
+          <li class="bullet home-services-slider-nav-bullets__link">WATER POTABILITY</li>
+          <li class="bullet home-services-slider-nav-bullets__link">POOL</li>
+          <li class="bullet home-services-slider-nav-bullets__link">WATER AND WASTE</li>
+          <li class="bullet home-services-slider-nav-bullets__link">EIFS</li>
+          <li class="bullet home-services-slider-nav-bullets__link">MOLD TESTING</li>
+          <li class="bullet home-services-slider-nav-bullets__link">NEW CONSTRUCTION</li>
+          <li class="bullet home-services-slider-nav-bullets__link">COMMERCIAL PROPERTY</li>
+          <li class="bullet home-services-slider-nav-bullets__link">PREVENTATIVE MAINTENANCE</li>
+        </ul>
+        <div id="services-arrows" class="home-services-slider-nav--arrows">
+          <span class="arrows prev home-services-slider-nav__arrow--prev hidden" data-direction="prev" data-hide-when="true">&lt;</span>
+          <span class="arrows next home-services-slider-nav__arrow--next" data-direction="next" data-hide-when="true">&gt;</span>
+        </div>
+      </div>
+      <div id="services-toggle" class="home-services-offcanvas-toggle home-services-offcanvas__inline-block active">
+        <!-- <span class="">=</span> -->
+        <span class="home-services-offcanvas-toggle__btn glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+      </div>
+    </div>
+  </aside>
+  <div class="home-services-slider home-services__inline-block">
+    <div class="slide-group">
+      <%= render :partial => 'slides_services' %>
+      <%= render :partial => 'slides_additional_services' %>
+      <%# one dummy slide at end %>
+      <div class="home-services-slider-slide last">
+        <div class="home-services-slider-slide__section--top"></div>
+        <div class="home-services-slider-slide__section--middle">
+          <div class="col-md-12"></div>
+        </div>
+        <div class="home-services-slider-slide__section--bottom">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

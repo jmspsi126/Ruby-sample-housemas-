@@ -1,0 +1,82 @@
+<div class="nav-group nav-group--absolute">
+  <nav class="navbar navbar-default topnav topnav--absolute">
+    <div class="container-fluid no-gutters">
+      <div class="navbar-header no-gutters">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand topnav__logo" href="<%= root_path %>">
+          <img src="https://s3-us-west-2.amazonaws.com/hm-com/static/cmvtC4ZTrg4Pp4WJt5U4oQ/nav-logo.png" />
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse no-gutters" id="navbar-links">
+        <ul id="" class="nav navbar-nav navbar-right topnav__links">
+          <!-- LEFT LINKS -->
+          <li class="dropdown topnav__links--section">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              COMPANY <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to 'PRESS RELEASES', company_path(:anchor => 'press') %></li>
+              <li><%= link_to 'NEWSROOM', company_path(:anchor => 'newsroom') %></li>
+              <li><%= link_to 'AWARDS', company_path(:anchor => 'awards') %></li>
+              <li><%= link_to 'MEDIA ASSETS', company_path(:anchor => 'media_assets') %></li>
+              <!-- <li><%#= link_to 'CONTACT', company_path(:anchor => 'contact_us') %></li> -->
+            </ul>
+          <li>
+          <li class="topnav__links--section <%= @resourcesactive %>">
+            <%= link_to 'RESOURCES', resources_path %>
+          </li>
+          <li class="topnav__links--section <%= @buyersactive %>">
+            <%= link_to 'BUYERS', buyers_path %>
+          </li>
+          <li class="topnav__links--section <%= @sellersactive %>">
+            <%= link_to 'SELLERS', sellers_path %>
+          </li>
+          <li class="topnav__links--section <%= @agentsactive %>">
+            <%= link_to 'AGENTS', agents_path %>
+          </li>
+          <!-- /LEFT LINKS -->
+
+          <!-- RIGHT LINKS -->
+          <li class="topnav__links--divider"></li>
+          <li class="topnav__links--customer <%= @servicesactive %>">
+            <%= link_to 'SERVICES', root_path(:anchor => 'services'), class: "collapse-mobile" %>
+          </li>
+          <li class="topnav__links--divider"></li>
+          <li class="topnav__links--customer <%= @reportactive %>">
+            <%= link_to 'ACCESS <br />REPORT'.html_safe, 'https://reports.housemaster.com/', class: "collapse-mobile word-wrap" %>
+          </li>
+          <li class="topnav__links--divider"></li>
+          <li id="request-inspection--top-nav" class="topnav__links--customer <%= @scheduleactive %>">
+            <% request_inspection = determine_header_request_inspection_link %>
+            <%= link_to 'REQUEST <br />INSPECTION'.html_safe, request_inspection[:link], :target => request_inspection[:target], class: request_inspection[:css_class], :onclick => request_inspection[:onclick] %>
+          </li>
+          <!-- <li class="topnav__links&#45;&#45;divider"></li> -->
+          <!-- <li class="topnav__links&#45;&#45;customer <%= @franchiseactive %>"> -->
+          <!--   <%#= link_to 'FRANCHISE <br />OPPORTUNITY'.html_safe, franchise_path, class: 'word&#45;wrap' %> -->
+          <!-- </li> -->
+          <!-- /RIGHT LINKS -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="accordion-content">
+    <div id="request-inspection" class="accordion-content__request">
+      <div class="accordion-content__close-button">
+        <i class="glyphicon glyphicon-remove"></i>
+      </div>
+      <%= render :partial => '_shared/forms/request_inspection' %>
+    </div>
+    <!-- <div id="report&#45;login" class="accordion&#45;content__login"> -->
+    <!--   <div class="accordion&#45;content__close&#45;button"> -->
+    <!--     <i class="glyphicon glyphicon&#45;remove"></i> -->
+    <!--   </div> -->
+    <!--   <%#= render :partial => '_shared/forms/report_login' %> -->
+    <!-- </div> -->
+  </div>
+</div>

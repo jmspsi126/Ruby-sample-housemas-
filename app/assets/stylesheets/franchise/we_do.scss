@@ -1,0 +1,65 @@
+.franchise-we-do {
+  padding-top: 90px;
+  padding-bottom: 110px;
+  @media(max-width: $screen-sm-min){
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+  &__title {
+    font-size: 26pt;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.5);
+  }
+  &__breaker {
+    width: 40%;
+    border-width: 2px;
+    text-align: center;
+    border-color: lightgray;
+  }
+  &__text {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgba(0,0,0,.5);
+  }
+  &__tags {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  &__tag {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: 1px solid gray;
+    background-color: transparent;
+    &.active {
+      background-color: gray;
+      color: #FFFFFF;
+    }
+  }
+  &-media {
+    &__image,
+    &__video {
+      height: 150px;
+      width: 100%;
+      margin-bottom: 25px;
+      position: relative;
+      background-color: lightgray;
+    }
+    &__video {
+      cursor: pointer;
+    }
+    &__play {
+      height: 50px;
+      width: 50px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      i {
+        font-size: 2.5em;
+      }
+    }
+  }
+}

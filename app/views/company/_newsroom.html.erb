@@ -1,0 +1,49 @@
+<section class="col-xs-12 company-news">
+  <h2 class="company-news__title">IN THE NEWS</h2>
+  <hr class="company-news__breaker">
+
+  <% hidden = 'show' # hidden = 'hidden toggle' if hidding %>
+  <div class="company-news-event <%= hidden %>">
+    <div class="col-xs-3">
+      <div style="background-image: url(https://s3-us-west-2.amazonaws.com/hm-com/static/-yBcMHWspiO86LINSVRfww/ashi.png);" class="company-news-event__image"></div>
+    </div>
+    <div class="col-xs-9">
+      <h3 class="company-news-event__date">January 15, 2016</h3>
+      <p class="company-news-event__text">
+        Our home inspectors are members of the National Institute of Building Inspectors (NIBI) and the American Society of Home Inspectors (ASHI).
+      </p>
+    </div>
+    <div class="clearfix"></div>
+    <hr class="company-news__breaker">
+  </div>
+  <div class="company-news-event <%= hidden %>">
+    <div class="col-xs-3">
+      <div style="background-image: url(https://s3-us-west-2.amazonaws.com/hm-com/static/-yBcMHWspiO86LINSVRfww/homesforheroes.png);" class="company-news-event__image"></div>
+    </div>
+    <div class="col-xs-9">
+      <h3 class="company-news-event__date">January 12, 2016</h3>
+      <p class="company-news-event__text">
+        Heroes in Southwest Michigan access discounts on home inspection services through HouseMaster. HouseMaster of Southwest Michigan is proud to be offering Heroes discounts on home inspections.
+      </p>
+    </div>
+    <div class="clearfix"></div>
+    <hr class="company-news__breaker">
+  </div>
+  <div class="company-news-event <%= hidden %>">
+    <div class="col-xs-3">
+      <div style="background-image: url(https://s3-us-west-2.amazonaws.com/hm-com/static/-yBcMHWspiO86LINSVRfww/deseretnews.jpg);" class="company-news-event__image"></div>
+    </div>
+    <div class="col-xs-9">
+      <h3 class="company-news-event__date">January 1, 2015</h3>
+      <p class="company-news-event__text">
+        Certified and trained home inspector Nathan Brimhall from HouseMaster Home Inspections has seen it all. "Foundation issues, electric, plumbing, heating, air conditioning," says Brimhall.
+      </p>
+    </div>
+    <div class="clearfix"></div>
+    <hr class="company-news__breaker">
+  </div>
+
+  <% if hidden != 'show' %>
+    <button class="company-news__show-all show-hide-button" data-target=".company-news-event.toggle">SHOW ALL</button>
+  <% end %>
+</section>

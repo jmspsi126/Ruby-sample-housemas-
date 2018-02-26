@@ -1,0 +1,43 @@
+development:
+  host_url: [base url of this project] # used in config/routes.rb (DO NOT append '/')
+  forms:
+    newsletter: https://api.block6services.com/API/consumer_newsletter.php
+    request_inspection: 
+      from: request@housemaster.com
+      to: hminfo@housemaster.com
+      bcc: hminfo@housemaster.com, it+housemaster@sopraservices.com
+    franchise:
+      from: Franchise Request Form <franchise_request@housemaster.com>
+      to: housemaster@franconnect.com
+      # # if we're still differentiating us/ca
+      # to_ca: housemastercanada@franconnect.com
+      bcc: hmopportunity@housemaster.com, it+housemaster@sopraservices.com
+  block6_api_base: https://api.block6services.com/API
+  inertia:
+    url: [url] # DO NOT append '/'
+    user_key: [user_key]
+    account_key: [account_key]
+  aws:
+    bucket: [bucket-name]
+    path: [path/] # DO NOT prepend '/'
+    base_url: [base url for bucket] # DO NOT append '/'
+    access_key_id: [key]
+    secret_access_key: [key]
+  defaults:
+    language: en # Change if english isn't default
+    email: hminfo@housemaster.com # default from/reply_to email
+  geomaticly:
+    developer_key: [key]
+    project_key: [key]
+    api_url: [base url of geomaticly] # DO NOT append '/'
+  mandrill:
+    host: ???
+    port: ???
+    smtp: ???
+    apikey: ???
+
+test:
+  token_salt: [test salt]
+
+production:
+  token_salt: [prod salt]

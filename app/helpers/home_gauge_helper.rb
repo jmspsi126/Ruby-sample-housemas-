@@ -1,0 +1,2 @@
+module HomeGaugeHelper
+end

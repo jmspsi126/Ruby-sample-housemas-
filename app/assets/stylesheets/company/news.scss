@@ -1,0 +1,42 @@
+.company-news {
+  margin-bottom: 100px;
+  @media (max-width: $screen-md-min){
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-size: 22pt;
+  }
+  &__breaker {
+    border: 1px solid lightgray;
+  }
+  &__show-all {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 25px;
+    border: #00806B 4px solid;
+    background-color: transparent;
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: initial;
+    color: #009578;
+    &:focus {
+      outline: none;
+    }
+  }
+  &-event {
+    &__image {
+      height: 80px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+    &__date {
+      font-size: 12pt;
+      color: gray;
+    }
+    &__text {
+      font-size: 11pt;
+      color: gray;
+    }
+  }
+}

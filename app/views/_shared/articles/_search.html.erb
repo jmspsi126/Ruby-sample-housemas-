@@ -1,0 +1,27 @@
+<section class="articles-search clearfix">
+  <div class="col-xs-12">
+    <div class="col-xs-9 col-sm-11 no-gutters">
+      <input id="search-articles" type="text" class="articles-search__search-input" placeholder="SEARCH" value="<%= (params['s']) ? params['s'] : '' %>" >
+    </div>
+    <div class="col-xs-1 no-gutters">
+      <button id="search-articles-filter" class="articles-search__toggler"><i class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <div id="articles-filter" class="col-xs-12 no-gutters hidden">
+    <div class="col-xs-12">
+      <h3 class="articles-search__title">Keywords (select to filter)</h3>
+      <div class="keywords articles-search-keywords">
+        <% i = 0 %>
+        <% @keywords.sort_by{|word| word.downcase}.each do |keyword| %>
+          <div class="col-xs-4 no-gutters">
+            <input id="keyword-<%= i %>" class="articles-search-keywords__checkbox" type="checkbox" name="keywords" value="<%= keyword %>"/><label for="keyword-<%= i %>" class="articles-search-keywords__label"><%= keyword %></label>
+          </div>
+          <% i = i + 1 %>
+        <% end %>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+
+</section>

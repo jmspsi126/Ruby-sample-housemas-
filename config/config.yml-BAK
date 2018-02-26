@@ -1,0 +1,37 @@
+production:
+  host_url: http://alpha.housemaster.com # used in config/routes.rb (DO NOT append '/')
+  forms:
+    newsletter: https://api.block6services.com/API/consumer_newsletter.php
+    request_inspection: 
+      from: request@housemaster.com
+      to: hminfo@housemaster.com
+      bcc: hminfo@housemaster.com, it+housemaster@sopraservices.com
+    franchise:
+      from: Franchise Request Form <franchise_request@housemaster.com>
+      to: housemaster@franconnect.com
+      # # if we're still differentiating us/ca
+      # to_ca: housemastercanada@franconnect.com
+      bcc: hmopportunity@housemaster.com, it+housemaster@sopraservices.com
+  block6_api_base: https://api.block6services.com/API
+  inertia:
+    url: http://api.inertiacrm.com # DO NOT append '/'
+    user_key: QU9Y8l4LbqCIkeGBWbHMfw
+    account_key: P3Uua8oe17oHbtLMEG2MFg
+  aws:
+    bucket: hm-com
+    path: dynamic/ # DO NOT prepend '/'
+    base_url: https://s3-us-west-2.amazonaws.com # DO NOT append '/'
+    access_key_id: AKIAJC6QFNXJ6DRBYAMQ
+    secret_access_key: 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
+  defaults:
+    language: en # Change if english isn't default
+    email: hminfo@housemaster.com # default from/reply_to email
+  geomaticly:
+    developer_key: xmtvtgC8JQ6ZarxtQmH6-A
+    project_key: wn0RJhLXUwYoU6w4pX-CKA
+    api_url: http://api.geomaticly.com # DO NOT append '/'
+  mandrill:
+    host: smtp.mandrillapp.com
+    port: 587
+    smtp: support@housemaster.com
+    apikey: fIDeuVnEpFCoescb9V9wWA

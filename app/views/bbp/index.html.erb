@@ -1,0 +1,12 @@
+<h1 class="welcome__title">The HouseMaster Buyer Benefits Program</h1>
+<p class="welcome__text">
+  can help you save hundreds or even thousands of dollars on the things you need as you move into your new home.
+  <br>
+  Subscribe below to start receiving these great benefits!
+</p>
+
+<%= link_to bbp_path+"?sU=#{@account}&sId=#{@list}&sE=#{@subscriber}&subscribe=yes" do %><button class="welcome__subscribe-btn">Subscribe!</button><% end %>
+
+<div class="welcome-videos">
+  <iframe class="welcome-videos__bbp" src="https://player.vimeo.com/video/130228166" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>

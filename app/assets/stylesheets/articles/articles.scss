@@ -1,0 +1,119 @@
+.article {
+  &-items {
+    &__breaker {
+      width: 100%;
+      border-color: gray;
+    }
+    &__show-all {
+      height: 50px;
+      width: 100%;
+      margin-bottom: 25px;
+      border: #00806B 4px solid;
+      background-color: transparent;
+      font-size: 16pt;
+      font-weight: bold;
+      line-height: initial;
+      color: #009578;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &-item {
+    margin-bottom: 25px;
+    color: #FFFFFF;
+    &__graphic {
+      height: 350px;
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      overflow: hidden;
+    }
+    &__overlay {
+      height: 100%;
+      width: 100%;
+      padding: 25px;
+      position: absolute;
+      bottom: 0px;
+      background-color: rgba(63,63,63,.9);
+      @media (max-width: $screen-sm-min) {
+        width: 110%;
+        padding-right: 15%;
+        overflow-y: scroll;
+      }
+    }
+    &__publish-date {
+      font-size: 11pt;
+      color: lightgray;
+      &--3-col {
+        font-size: 10pt;
+        float: left;
+        @media(max-width: $screen-xs-min){
+          width: 45%;
+          float: none;
+          display: inline-block;
+        }
+      }
+    }
+    &__author {
+      &-img {
+        width: 45px;
+        margin-top: -10px;
+        border-radius: 30px;
+        &--3-col {
+          margin-top: 0;
+          margin-left: 10px;
+        }
+        &--small-screen {
+          display: none;
+          @media(min-width: $screen-xs-min) and (max-width: $screen-sm-min){
+            margin-right: 30px;
+            float: left;
+            display: initial;
+          }
+        }
+      }
+      &-name {
+        font-size: 11pt;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        &--3-col {
+          font-size: 10pt;
+          float: left;
+          @media(min-width: $screen-xs-min) and (max-width: $screen-sm-min){
+            width: 50%;
+            float: none;
+            display: block;
+          }
+          @media(max-width: $screen-xs-min){
+            width: 50%;
+            float: none;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &__title {
+      font-size: 22pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      &--small {
+        font-size: 20pt;
+        font-weight: normal;
+      }
+      a {
+        color: #FFFFFF;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          color: #FFFFFF;
+        }
+      }
+    }
+    &__text {
+      font-size: 12pt;
+      color: lightgray;
+    }
+  }
+}

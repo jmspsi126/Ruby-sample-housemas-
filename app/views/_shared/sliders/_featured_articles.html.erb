@@ -1,0 +1,28 @@
+<section class="featured-article <%= (defined? modifier_class) ? modifier_class : '' %>">
+  <h3 class="text-center featured-article__title">FEATURED ARTICLES</h3>
+  <div class="featured-article-slider">
+    <div class="slide-group">
+      <% i = 0 %>
+      <% @article_slider_articles.each do |slide| %>
+        <div class="col-sm-6 featured-article-slider-slide <%= (i < 2) ? 'active' : '' %>">
+          <% article_image = determine_article_image(slide) %>
+          <div class="featured-article-slider-slide__graphic" style="background-image: url(<%= article_image %>);"></div>
+          <div class="featured-article-slider-slide__content">
+            <h3 class="featured-article-slider-slide__title"><%= link_to slide['title'], "#{root_url}#{slide['slug']}" %></h3>
+            <p class="featured-article-slider-slide__desc"><%= slide['seo_description'] %></p>
+            <div class="featured-article-slider-slide__bottom">
+              <%= link_to 'LEARN MORE', "#{root_url}#{slide['slug']}", :class => "featured-article-slider-slide__more" %>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+    <div class="hidden-xs featured-article-nav im-a-slider-nav" data-target="featured-article-slider">
+      <div class="arrows next featured-article-nav__arrow--next" data-direction="next" data-hide-when="true">&gt;</div>
+      <div class="arrows prev featured-article-nav__arrow--prev hidden" data-direction="prev" data-hide-when="true">&lt;</div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</section>

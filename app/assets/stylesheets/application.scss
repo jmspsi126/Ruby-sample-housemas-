@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import "fonts";
+@import "_media_breakpoints";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+//global overrides
+@import "overrides/_navbar_override";
+@import "overrides/_button";
+@import "overrides/_grid";
+@import "overrides/_modal";
+
+//shared
+@import "shared/footer";
+@import "shared/form/local_office";
+@import "shared/form/request_inspection";
+// @import "shared/form/report_login";
+@import "shared/form/newsletter_subscribe";
+
+* {
+  font-family: frutiger, "Myriad Pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+.anchor-id {
+  display: block;
+  height: 70px;
+  margin-top: -70px;
+  visibility: hidden;
+}
+.loading {
+  height: 100px;
+  width: 100%;
+  background: transparent url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* chrome's form autofill styling */
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill {
+  border-color: #0c3b60;
+}

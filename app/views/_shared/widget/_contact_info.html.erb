@@ -1,0 +1,28 @@
+<div class="col-xs-12">
+  <div class="owner-contact__header">HOUSEMASTER INSPECTING</div>
+  <div class="col-xs-12 owner-contact__indent">
+    <div class="owner-contact__location"><%= "#{@geo_zees['location']['city']}, #{@geo_zees['location']['state']}" %></div>
+    <a class="owner-contact__change-location" data-toggle="modal" data-target="#local-office-modal">change location</a>
+    <div class="owner-contact__phone">
+      <span class="owner-contact__icon glyphicon glyphicon-earphone"></span>
+      <a class="owner-contact__phone--link" href="<%= "tel:#{@geo_zees['zees'][0]['display_phone']}" %>"><%= "#{@geo_zees['zees'][0]['display_phone']}" %></a>
+    </div>
+    <div class="owner-contact__email">
+      <span class="owner-contact__icon glyphicon glyphicon-envelope"></span>
+      <a class="owner-contact__email--link" href="<%= "mailto:#{@geo_zees['zees'][0]['display_email']}" %>"><%= "#{@geo_zees['zees'][0]['display_email']}" %></a>
+    </div>
+    <% if !@geo_zees['zees'][0]['display_address_line_1'].blank? && !@geo_zees['zees'][0]['display_address_line_2'].blank? %>
+      <div class="owner-contact__address1">
+        <span class="owner-contact__icon glyphicon glyphicon-map-marker"></span>
+        <%= @geo_zees['zees'][0]['display_address_line_1'] %>
+      </div>
+      <div class="owner-contact__address2">
+        <%= @geo_zees['zees'][0]['display_address_line_2'] %>
+      </div>
+    <% end %>
+    <div class="owner-contact__schedule">
+      <% request_inspection = determine_widget_request_inspection_link %>
+      <a class="<%= request_inspection[:css_class] %>" href="<%= request_inspection[:link] %>" target="<%= request_inspection[:target] %>" onclick="<%= request_inspection[:onclick] %>" role="button">REQUEST AN INSPECTION</a>
+    </div>
+  </div>
+</div>

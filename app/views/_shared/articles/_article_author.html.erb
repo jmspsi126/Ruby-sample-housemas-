@@ -1,0 +1,13 @@
+<section class="col-xs-12 article-meta">
+  <p>
+    <% author_image = determine_author_image(@article) %>
+    <% author_name = determine_author_name(@article) %>
+    <% publish_date = format_publish_date(@article, 'long') %>
+    <% if !author_image.blank? %>
+      <img class="article-meta__author-img" src="<%= author_image %>"/>
+    <% end %>
+    <span class="article-meta__author-name"><%= author_name %></span>
+    <span class="article-meta__date"><%= " | #{publish_date}" %></span>
+  </p>
+  <div class="clearfix"></div>
+</section>

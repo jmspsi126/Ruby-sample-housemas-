@@ -1,0 +1,132 @@
+.featured-article {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #F4F5F6;
+  &--article-page {
+    background-color: inherit;
+  }
+  &__title {
+    margin-bottom: 0;
+    text-align: center;
+    color: #6D6E70;
+    // font-size: 2.25em;
+    font-size: 26pt;
+  }
+  &-slider {
+    position: relative;
+    padding: 0 100px;
+    @media(max-width: $screen-xs-min){
+      padding: 0 30px;
+    }
+    .slide-group {}
+    &-slide {
+      min-height: 600px;
+      padding-left: 10px;
+      padding-right: 5px;
+      position: relative;
+      display: none;
+      &.active {
+        display: block;
+      }
+      &__graphic {
+        height: 250px;
+        width: 100%;
+        margin-top: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+      &__content {
+        min-height: 300px;
+        padding: 0 40px;
+        background-color: #fff;
+        position: absolute;
+      }
+      &__title {
+        text-align: center;
+        font-size: 16pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.5;
+        a, a:hover {
+          text-decoration: none;
+          color: #6D6E70;
+        }
+      }
+      &__desc {
+        font-size: 11pt;
+        text-align: center;
+        line-height: 1.2;
+        color: #6D6E70;
+      }
+      &__bottom {
+        width: 100%;
+        margin-left: -40px;
+        position: absolute;
+        bottom: 30px;
+      }
+      &__more {
+        max-width: 130px;
+        margin: auto;
+        padding-top: 7px;
+        padding-bottom: 5px;
+        border: #6D6E70 4px solid;
+        border-radius: 0px;
+        display: block;
+        font-size: 9pt;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: #6D6E70;
+        @media(max-width: $screen-xs-min){
+          position: relative;
+          bottom: 0;
+        }
+        &:hover {
+          text-decoration: none;
+          background-color: #6D6E70;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &-nav {
+    &__arrow {
+      &--prev, &--next {
+        background-image: url(HSM-web-articles-handoff_mediumarrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+
+        position: absolute;
+        top: 15px;
+        display: block;
+        height: 35px;
+        width: 25px;
+        color: transparent;
+        cursor: pointer;
+
+        /* double click won't highlight text */
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+      &--prev {
+        background-position: top left;
+        left: 30px;
+      }
+      &--next {
+        background-position: top right;
+        right: 25px;
+
+        /* flip arrow opposite direction */
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+      }
+    }
+  }
+}

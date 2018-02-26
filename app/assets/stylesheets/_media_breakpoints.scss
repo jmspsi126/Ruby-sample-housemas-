@@ -1,0 +1,11 @@
+//ORIGINAL NUMBERS, INSERTED SO WE CAN USE VARIABLES 
+$screen-xs-min: 480px !default;
+$screen-sm-min: 768px !default;
+// $screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+
+//CHANGE THESE BREAK POINTS TO SUPPORT NAV
+$screen-md-min: 900px !default;
+// $grid-float-breakpoint: $screen-md-min;
+$grid-float-breakpoint: 1100px; // uncollapse navbar after this point
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;

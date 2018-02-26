@@ -1,0 +1,65 @@
+.articles-search {
+  margin: 25px 0;
+  &__search-input {
+    height: 50px;
+    width: 100%;
+    padding-left: 15px;
+    border: #00806B 4px solid;
+    border-radius: 0;
+    display: block;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    font-size: 12pt;
+    font-weight: bold;
+    color: gray;
+    &:focus {
+      background-color: #fafafa;;
+      outline: none;
+    }
+
+    $placeholder-color: lightgray;
+    &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $placeholder-color;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $placeholder-color;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $placeholder-color;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $placeholder-color;
+    }
+  }
+  &__toggler {
+    height: 50px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: #00806B 4px solid;
+    border-left-width: 0px;
+    line-height: 1.5em;
+    font-size: 22pt;
+    text-align: center;
+    color: gray;
+    &:focus {
+      outline: none;
+    }
+    i {
+      color: #00806B;
+    }
+  }
+  &__title {
+    font-size: 16pt;
+    font-weight: bold;
+  }
+  &-keywords {
+    margin-bottom: 25px;
+    &__label {
+      font-size: 10pt;
+      font-weight: normal;
+    }
+    input#{&}__checkbox {
+      margin-right: 5px;
+    }
+  }
+}

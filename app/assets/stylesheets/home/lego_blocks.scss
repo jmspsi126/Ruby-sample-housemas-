@@ -1,0 +1,55 @@
+.lego-blocks {
+  min-height: 200px;
+}
+
+.lego-block {
+  position: relative;
+  height: 246px;
+  background-color: #00806b;
+  text-align: center;
+  padding-top: 60px;
+
+  &__circle {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    opacity: 0.9;
+    &:hover {
+      background-color: lightgray;
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+
+  &__title {
+    position: relative;
+    top: 20px;
+    z-index: 2;
+    font-size: 22pt;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &__text {
+    position: relative;
+    top: 20px;
+    z-index: 2;
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 10pt;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<section class="col-xs-12 company-awards">
+  <h2 class="company-awards__title">AWARDS</h2>
+  <hr class="company-awards__breaker">
+
+  <% hidden = 'show' # hidden = 'hidden toggle' if hidding %>
+  <div class="company-awards-award <%= hidden %>">
+    <div class="col-xs-3">
+      <div style="background-image: url(https://s3-us-west-2.amazonaws.com/hm-com/static/BQx4wiQBT-_H64eYh3cnsQ/top50-2014.jpg);" class="company-awards-award__image"></div>
+    </div>
+    <div class="col-xs-9">
+      <h3 class="company-awards-award__title">2014 FBR'S TOP 50 FRANCHISE</h3>
+      <p class="company-awards-award__text">
+        Based on a survey of more than 26,000 franchisees representing more than 350 franchise brands, Franchise Business Review's 2014 franchisee satisfaction award-winners includes many familiar faces.
+      </p>
+    </div>
+    <div class="clearfix"></div>
+    <hr class="company-awards__breaker">
+  </div>
+  <div class="company-awards-award <%= hidden %>">
+    <div class="col-xs-3">
+      <div style="background-image: url(https://s3-us-west-2.amazonaws.com/hm-com/static/BQx4wiQBT-_H64eYh3cnsQ/franchise500.jpg);" class="company-awards-award__image"></div>
+    </div>
+    <div class="col-xs-9">
+      <h3 class="company-awards-award__title">FRANCHISE 500</h3>
+      <p class="company-awards-award__text">
+        HouseMaster, the nation's first and oldest home inspection franchise, has been named the No. 1 home inspection franchise in Entrepreneur magazine's Franchise 500&reg; for the third straight year.
+      </p>
+    </div>
+    <div class="clearfix"></div>
+    <hr class="company-awards__breaker">
+  </div>
+  <% hidden = 'hidden toggle' # hidden = 'show' if showing %>
+  <div class="company-awards-award <%= hidden %>">
+    <div class="col-xs-3">
+      <div style="background-image: url(https://s3-us-west-2.amazonaws.com/hm-com/static/BQx4wiQBT-_H64eYh3cnsQ/top50-2013.jpg);" class="company-awards-award__image"></div>
+    </div>
+    <div class="col-xs-9">
+      <h3 class="company-awards-award__title">2013 FBR'S TOP 50 FRANCHISE</h3>
+      <p class="company-awards-award__text">
+        Franchise Business Review looked specifically at responses from franchisees who categorized themselves as "veterans" in the demographics section of the survey-in 2013, that was 2,892 vets.
+      </p>
+    </div>
+    <div class="clearfix"></div>
+    <hr class="company-awards__breaker">
+  </div>
+
+  <% if hidden != 'show' %>
+    <button class="company-awards__show-all show-hide-button" data-target=".company-awards-award.toggle">SHOW ALL</button>
+  <% end %>
+</section>

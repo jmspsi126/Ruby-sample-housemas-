@@ -1,0 +1,122 @@
+.request-inspection {
+  min-height: 450px;
+  padding: 80px 0 100px;
+  @media (max-width: $screen-sm-min){
+    padding: 10px 0 100px;
+  }
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b7b7b7+0,ffffff+100 */
+  background: rgb(183,183,183); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgb(183,183,183) 0%, rgb(255,255,255) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(183,183,183)), color-stop(100%,rgb(255,255,255))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgb(183,183,183) 0%,rgb(255,255,255) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgb(183,183,183) 0%,rgb(255,255,255) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgb(183,183,183) 0%,rgb(255,255,255) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgb(183,183,183) 0%,rgb(255,255,255) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7b7b7', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  &__title {
+    margin-bottom: 25px;
+    font-size: 26pt;
+    color: #0c3b60;
+  }
+  &-form {
+    &__thanks {
+      text-align: center;
+      font-size: 22pt;
+    }
+    .center-block {
+      @media (max-width: $screen-sm-min){
+        .text-right {
+          text-align: center;
+        }
+      }
+    }
+    &__label {
+      margin: 10px 0 0;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      font-size: 16pt;
+      font-weight: normal;
+      line-height: initial;
+      color: #0c3b60;
+      // @media (max-width: $screen-sm-min){
+      //   position: initial;
+      // }
+      &-container {
+        position: relative;
+      }
+    }
+    &__input {
+      height: 45px;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 0 10px;
+      background-color: transparent;
+      border: #0c3b60 4px solid;
+      font-size: 16pt;
+      line-height: initial;
+      color: #0c3b60;
+      
+      &--date {
+        width: 100%;
+        border-right-width: 0;
+      }
+
+      $placeholder-color: rgba(0, 0, 0, 0.4);
+      &::-webkit-input-placeholder { /* WebKit browsers */
+        color: $placeholder-color;
+      }
+      &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: $placeholder-color;
+      }
+      &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: $placeholder-color;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: $placeholder-color;
+      }
+      &:focus {
+        background-color: transparent;
+        border-color: initial;
+        outline: none;
+      }
+    }
+    &__calendar-button {
+      height: 45px;
+      padding: 2px 9px 0 11px;
+      border: #0c3b60 4px solid;
+      background-color: transparent;
+      color: #0c3b60;
+      font-size: 16pt;
+      position: absolute;
+      top: 0;
+      right: 15px;
+    }
+    &__submit {
+      height: 50px;
+      width: 150px;
+      padding-top: 6px;
+      background-color: transparent;
+      border: #0c3b60 4px solid;
+      font-size: 16pt;
+      font-weight: bold;
+      color: #0c3b60;
+      &:hover {
+        background-color: #0c3b60;
+        border-color: #0c3b60;
+        color: #ffffff;
+      }
+      // @media (max-width: $screen-sm-min){
+      //   width: 100%;
+      //   margin-top: 15px;
+      // }
+    }
+    &__error {
+      padding-left: 10px;
+      color: red;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    &__loader {}
+  }
+}

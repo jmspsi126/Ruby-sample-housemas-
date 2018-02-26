@@ -1,0 +1,23 @@
+/*
+ * Articles consist of the following pages:
+ * 
+ * /resources
+ * /buyers
+ * /sellers
+ * /agents
+ * 
+ */
+
+ //for media queries
+ @import "_media_breakpoints";
+
+ //resources
+ @import "articles/resources-hero";
+
+ //resources, buyers, sellers, agents
+ @import "shared/sliders/header_articles";
+ @import "articles/article_search";
+ @import "articles/articles";
+
+ //buyers, sellers, agents
+ @import "shared/sliders/header_text_overlay";

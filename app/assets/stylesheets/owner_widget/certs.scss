@@ -1,0 +1,71 @@
+.owner-certs {
+  &-info{
+    min-height: 70px;
+    // margin-bottom: 25px;
+    padding: 20px 40px;
+    background-color: #F4F5F6;
+    position: relative;
+    &-slider {
+      .slide-group {}
+      &-slide {
+        position: relative;
+        display: none;
+        &.active {
+          display: block;
+        }
+        &__image {
+          height:75px;
+          width:75px;
+          margin: 0 auto;
+          display: block;
+          @media(max-width: $screen-xs-min){
+            height:55px;
+            width:55px;
+          }
+        }
+      }
+    }
+    &-nav {
+      &__arrow {
+        &--prev, &--next {
+          height: 40px;
+          width: 20px;
+          background-image: url(HSM-web-articles-handoff_mediumarrow.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 20px;
+
+          position: absolute;
+          top: 40px;
+          display: block;
+          color: transparent;
+          cursor: pointer;
+          @media(max-width: $screen-xs-min){
+            top: 30px;
+          }
+
+          /* double click won't highlight text */
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+        &--prev {
+          background-position: top left;
+          left: 10px;
+        }
+        &--next {
+          background-position: top right;
+          right: 10px;
+
+          /* flip arrow opposite direction */
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+        }
+      }
+    }
+  }
+}

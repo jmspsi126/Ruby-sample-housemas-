@@ -1,0 +1,11 @@
+<section class="col-xs-12 article-header">
+  <div class="col-md-6 article-header__section">
+    <% article_image = determine_article_image(@article) %>
+    <div class="article-header__graphic" style="background-image: url(<%= article_image %>);">
+      <h1 class="visible-xs visible-sm article-header__title--mobile"><%= @article['title'] %></h1>
+    </div>
+  </div>
+  <div class="hidden-xs hidden-sm col-md-6 article-header__section">
+    <h1 class="article-header__title"><%= @article['title'] %></h1>
+  </div>
+</section>

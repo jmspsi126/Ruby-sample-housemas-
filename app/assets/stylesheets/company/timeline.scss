@@ -1,0 +1,54 @@
+.company-timeline {
+  min-height: 790px;
+  width: 100%;
+  background-color: #009578;
+  position: relative;
+  overflow: hidden;
+  &-events {
+    height: 5px;
+    width: 110%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 230px;
+    background-color: #F4F5F6;
+    li {
+      color: #FFFFFF;
+      &:nth-child(odd) {
+        margin-right: 100px;
+        p {
+          top: 30px;
+          left: -90px;
+        }
+      }
+      &:nth-child(even) {
+        margin-right: 40px;
+        p {
+          left: -90px;
+          bottom: 30px;
+        }
+      }
+      height: 30px;
+      width: 30px;
+      margin: 0 auto;
+      padding-right: 20px;
+      border: 5px solid #F4F5F6;
+      border-radius: 30px;
+      position: relative;
+      top: -12px;
+      left: -45px;
+      list-style-type: none;
+      background-color: #009578;
+      display: inline-block;
+      text-align: center;
+    }
+    &__bullet-image {}
+    &__text {
+      width: 200px;
+      font-size: 11pt;
+      position: absolute;
+    }
+  }
+}

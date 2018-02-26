@@ -1,0 +1,9 @@
+<section id="owner-widget" class="row no-gutters owner-widget">
+  <div class="col-xs-12 loading hidden"></div>
+  <div class="col-xs-12 content">
+    <% # loaded from ajax request welcome#get_zee_html %>
+    <% if @widget_session_check %>
+      <%= render( :partial => "_shared/widget/load_content", :layout => false ).html_safe %>
+    <% end %>
+  </div>
+</section>

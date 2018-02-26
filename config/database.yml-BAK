@@ -1,0 +1,8 @@
+default: &default
+  adapter: mysql2
+  username: hmdev
+  password: HemD3veloper
+
+production:
+  <<: *default
+  database: housemaster_production

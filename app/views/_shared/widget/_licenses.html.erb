@@ -1,0 +1,6 @@
+<% selected = (@geo_zees['selected']) ? @geo_zees['selected'] : 0 %>
+<div class="owner-license-info">
+  <% @geo_zees['zees'][selected]["licenses"].each do |l| %>
+    <p class="owner-license-info__name"><%= l['name'].html_safe %></p>
+  <% end %>
+</div>

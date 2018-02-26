@@ -1,0 +1,7 @@
+<div class="owner-profile-info">
+  <div class="owner-profile-info__name"><%= @geo_zees['zees'][0]["display_name"].gsub(' ', '<br />').html_safe %></div>
+  <% zee_image = find_zee_image(@geo_zees['zees'][0]['franchisee_number']) %>
+  <% if !zee_image.blank? %>
+    <img class="owner-profile-info__img" src="<%= zee_image %>"/>
+  <% end %>
+</div>

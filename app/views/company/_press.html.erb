@@ -1,0 +1,25 @@
+<section class="col-xs-12 company-press">
+  <h2 class="company-press__title">PRESS RELEASES</h2>
+  <hr class="company-press__breaker">
+
+  <% hidden = 'show' # hidden = 'hidden toggle' if hidding %>
+  <div class="company-press-event <%= hidden %>">
+    <h3 class="company-press-event__date">January 15, 2015</h3>
+    <p class="company-press-event__text">
+      HouseMaster, the first and most experienced home inspection franchise company in North America, recently honored Fred Holwell of the local Paradise, NL franchise with the Market Penetration Award at the company's annual conference held October 16-18 at the Charleston Marriot.
+    </p>
+    <hr class="company-press__breaker">
+  </div>
+
+  <div class="company-press-event <%= hidden %>">
+    <h3 class="company-press-event__date">January 5, 2015</h3>
+    <p class="company-press-event__text">
+      HouseMaster, the first and one of the largest home inspection franchise companies in North America, has announced lifelong resident, Kelly Murphy, will now offer professional, guaranteed HouseMaster Home Inspection Services in the Corridor area including the town of Iowa City and Cedar Rapids.
+    </p>
+    <hr class="company-press__breaker">
+  </div>
+
+  <% if hidden != 'show' %>
+    <button class="company-press__show-all show-hide-button" data-target=".company-press-event.toggle">SHOW ALL</button>
+  <% end %>
+</section>

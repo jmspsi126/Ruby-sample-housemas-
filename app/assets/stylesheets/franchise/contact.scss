@@ -1,0 +1,113 @@
+.franchise-contact {
+  &__background {
+    min-height: 550px;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-color: #0C3A5F;
+    @media (max-width: $screen-sm-min){
+      background-size: 150% 100%;
+      background-position: center;
+    }
+  }
+  &__title {
+    font-size: 26pt;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  &__breaker {
+    width: 90%;
+    border-width: 2px;
+    text-align: center;
+    border-color: rgba(255,255,255,.3);
+  }
+  $lightblue: #6E8BA0;
+  &-info {
+    margin-bottom: 25px;
+    font-size: 1.25em;
+    font-weight: bold;
+    line-height: 1;
+    &__title {
+      font-size: 16pt;
+      color: #FFFFFF;
+    }
+    &__street,
+    &__city-state-zip,
+    &__phone,
+    &__email,
+    &__url {
+      margin-bottom: 5px;
+      font-size: 12pt;
+      color: $lightblue;
+      a {
+        color: $lightblue;
+      }
+    }
+    &__email {
+      padding: 15px 0;
+    }
+  }
+  &-form {
+    &__thanks {
+      text-align: center;
+      font-size: 22pt;
+      color: #FFFFFF;
+    }
+    &__name,
+    &__email,
+    &__message,
+    &__submit {
+      height: 45px;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 0 10px;
+      background-color: transparent;
+      border: #FFFFFF 4px solid;
+      font-size: 12pt;
+      color: #FFFFFF;
+      &::-webkit-input-placeholder { /* WebKit browsers */
+        font-weight: bold;
+        color: $lightblue;
+      }
+      &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        font-weight: bold;
+        color: $lightblue;
+      }
+      &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        font-weight: bold;
+        color: $lightblue;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        font-weight: bold;
+        color: $lightblue;
+      }
+      &:focus {
+        background-color: transparent;
+        border-color: initial;
+        outline: none;
+      }
+    }
+    &__message {
+      height: 150px;
+      padding: 5px 10px;
+    }
+    &__submit {
+      height: 50px;
+      width: 130px;
+      float: right;
+      font-size: 16pt;
+      font-weight: bold;
+      line-height: initial;
+    }
+    &__error {
+      padding-left: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 12pt;
+    }
+    &__loader {}
+  }
+}

@@ -1,0 +1,8 @@
+<section class="col-xs-12 article-body">
+  <%= @article["body"].html_safe %>
+</section>
+<div class="row no-gutters">
+  <div class="col-xs-12 no-gutters">
+    <%= render :partial => '_shared/sliders/featured_articles', :locals => {:modifier_class => 'featured-article--article-page'} %>
+  </div>
+</div>

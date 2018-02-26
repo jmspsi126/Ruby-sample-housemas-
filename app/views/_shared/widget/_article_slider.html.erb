@@ -1,0 +1,54 @@
+<div class="owner-articles">
+  <div class="owner-articles-slider">
+    <div class="slide-group">
+      <% i = 0 %>
+      <% @zee_articles.each do |slide| %>
+        <div class="owner-articles-slider-slide <%= (i == 0) ? 'active' : '' %>">
+          <% article_image = determine_article_image(slide) %>
+          <a href="<%= "#{root_url}#{slide['slug']}" %>">
+            <div class="owner-articles-slider-slide__graphic" style="background-image: url(<%= article_image %>);">
+              <div class="col-xs-12 owner-articles-slider-slide-overlay">
+                <div class="owner-articles-slider-slide-overlay__content">
+                  <% author_image = determine_author_image(slide) %>
+                  <% author_name = determine_author_name(slide) %>
+                  <% if !author_image.blank? %>
+                    <img src="<%= author_image %>" class="owner-articles-slider-slide-overlay__image">
+                  <% end %>
+                  <strong class="owner-articles-slider-slide-overlay__author">
+                    Author: <br>
+                    <%= author_name %>
+                  </strong>
+                </div>
+                <div class="owner-articles-slider-slide-overlay__background"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+    <div class="owner-articles-slider-nav im-a-slider-nav" data-target="owner-articles-slider">
+      <ul class="bullets owner-articles-slider-nav-bullets">
+        <% for ii in 1..i %>
+          <li class="bullet <%= (ii == 1) ? 'active' : '' %>"></li>
+        <% end %>
+      </ul>
+      <span class="arrows owner-articles-slider-nav__arrow--next" data-direction="next">&gt;</span>
+      <span class="arrows owner-articles-slider-nav__arrow--prev" data-direction="prev">&lt;</span>
+    </div>
+  </div>
+  <div class="owner-articles-slider owner-articles-slider--keywords">
+    <div class="slide-group">
+      <% i = 0 %>
+      <% @zee_articles.each do |slide| %>
+        <div class="owner-articles-slider-slide owner-articles-meta  <%= (i == 0) ? 'active' : '' %>">
+          <h4 class="owner-articles-meta__title"><%= link_to slide['title'], "#{root_url}#{slide['slug']}" %></h4>
+          <p class="col-md-2 no-gutters owner-articles-meta__keywords owner-articles-meta__keywords--title">KEYWORDS</p>
+          <p class="col-md-10 no-gutters owner-articles-meta__keywords"><%= slide['seo_keywords'] %></p>
+          <div class="clearfix"></div>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+  </div>
+</div>

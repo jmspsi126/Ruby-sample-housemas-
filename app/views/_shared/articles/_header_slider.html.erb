@@ -1,0 +1,36 @@
+<section class="articles-head">
+  <div class="articles-head-slider">
+    <div class="slide-group">
+      <% i = 0 %>
+      <% @article_list[0,3].each do |slide| %>
+
+        <% header_image = determine_header(slide) %>
+        <div class="articles-head-slider-slide articles-head-slider-slide--img <%= (i == 0) ? 'active' : '' %>" style="background-image: url(<%= header_image %>)">
+          <div class="articles-head-slider-slide__overlay">
+            <div class="col-xs-8">
+              <h1 class="articles-head-slider-slide__title">
+                <%= @header_title %>
+              </h1>
+              <p class="articles-head-slider-slide__text"><%= link_to slide['title'], "#{root_url}#{slide['slug']}" %></p>
+
+              <% author_name = determine_author_name(slide) %>
+              <strong class="articles-head-slider-slide__author">Author: <%= author_name %></strong>
+            </div>
+          </div>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+    <div class="articles-head-slider-nav im-a-slider-nav" data-target="articles-head-slider">
+      <ul class="bullets articles-head-slider-nav-bullets">
+        <% for ii in 1..i %>
+          <li class="bullet <%= (ii == 1) ? 'active' : '' %>">
+            <%= ii %>
+          </li>
+        <% end %>
+      </ul>
+      <!-- <span class="arrows articles&#45;head&#45;slider&#45;nav__arrow&#45;&#45;next" data&#45;direction="next">&#38;gt;</span> -->
+      <!-- <span class="arrows articles&#45;head&#45;slider&#45;nav__arrow&#45;&#45;prev" data&#45;direction="prev">&#38;lt;</span> -->
+    </div>
+  </div>
+</section>

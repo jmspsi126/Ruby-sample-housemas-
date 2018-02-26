@@ -1,0 +1,38 @@
+<% selected = @geo_zees['selected'] %>
+<div class="col-xs-12 col-sm-6 col-md-12 owner-contact">
+  <%= render :partial => '_shared/widget/contact_info_multiple' %>
+</div>
+
+
+<!-- <div class="col&#45;xs&#45;12 col&#45;sm&#45;6 col&#45;md&#45;12 owner&#45;local&#45;interest"> -->
+<!--   <div class="col&#45;xs&#45;12"> -->
+<!--     <div class="owner&#45;local&#45;interest__header">local interest <a class="owner&#45;local&#45;interest__show&#45;all" href="#">show all</a></div> -->
+<!--     <%= render :partial => '_shared/widget/article_slider' %> -->
+<!--   </div> -->
+<!-- </div> -->
+
+
+<div class="col-xs-12">
+  <div class="owner-profile">
+    <div class="col-xs-12">
+      <%= render :partial => '_shared/widget/profile_multiple' %>
+    </div>
+  </div>
+
+  <div class="owner-certs">
+    <div class="col-xs-12">
+      <div class="owner-widget__header">CERTIFICATIONS</div>
+      <%= render :partial => '_shared/widget/certs_slider' %>
+    </div>
+  </div>
+
+  <% p @geo_zees['zees'] %>
+  <% hidden = (!selected.nil? && !@geo_zees['zees'][selected]['licenses'].empty?) ? '' : 'hidden' %>
+  <div class="owner-license <%= hidden %>">
+    <div class="col-xs-12">
+      <div class="owner-widget__header">LICENSES</div>
+      <%= render :partial => '_shared/widget/licenses' %>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'zee_widget_multi' %>

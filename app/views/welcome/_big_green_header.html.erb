@@ -1,0 +1,42 @@
+<section class="homehero">
+  <div class="homehero-slider">
+    <div class="slide-group">
+      <% i = 0 %>
+      <% @home_header.each do |slide| %>
+        <div class="homehero-slider-slide homehero-slider-slide--img <%= (i == 0) ? 'active' : '' %>" style="background-image: url(<%= slide['header_image_home'] %>)">
+          <h1 class="col-md-offset-1 col-md-4 homehero-slider-slide__title">
+            <%= link_to slide['title'], "#{root_url}#{slide['slug']}" %>
+          </h1>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-offset-5 col-md-6 homehero-slider homehero-slider--overlay">
+    <div class="slide-group">
+      <% i = 0 %>
+      <% @home_header.each do |slide| %>
+        <div class="homehero-slider-slide <%= (i == 0) ? 'active' : '' %>">
+          <hr class="homehero-slider-slide__breaker">
+          <p class="homehero-slider-slide__text">
+            <%= link_to slide['seo_description'], "#{root_url}#{slide['slug']}" %>
+          </p>
+          <hr class="homehero-slider-slide__breaker">
+          <p class="homehero-slider-slide__topic"><%= slide['seo_keywords'] %></p>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+    <div class="homehero-slider-nav im-a-slider-nav" data-target="homehero-slider">
+      <ul class="bullets homehero-slider-nav-bullets">
+        <% for ii in 1..i %>
+          <li class="bullet <%= (ii == 1) ? 'active' : '' %>">
+            <%= ii %>
+          </li>
+        <% end %>
+      </ul>
+      <span class="arrows homehero-slider-nav__arrow--next" data-direction="next">&gt;</span>
+      <span class="arrows homehero-slider-nav__arrow--prev" data-direction="prev">&lt;</span>
+    </div>
+  </div>
+</section>

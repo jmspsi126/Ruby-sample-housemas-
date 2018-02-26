@@ -1,0 +1,23 @@
+/* no gutters on row - http://julienmelissas.com/no-gutter-column-trick-for-bootstrap/ */
+.navbar-header.no-gutters,
+.navbar-collapse.no-gutters,
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.navbar-collapse.no-gutters,
+[class^="col-"].no-gutters,
+[class*=" col-"].no-gutters,
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"],
+.container.no-gutters, 
+.container-fluid.no-gutters {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* center-block working with cols - http://stackoverflow.com/a/18153551/1180523 */
+*[class^="col-"].center-block {
+  float: none;
+}
